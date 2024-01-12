@@ -1,0 +1,146 @@
+body {
+    background-color: #000033;
+}
+
+.container {
+    background-image: radial-gradient(closest-side at 30% 50%, rgb(251, 255, 200), rgb(146, 146, 55), #000033);
+    background-repeat: no-repeat;
+}
+
+.top {
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    width: 80%;
+    margin: auto;
+    background-image: url("../img/tief_03.png");
+    background-repeat: no-repeat;
+    text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 5px #000033;
+}
+
+main h1 {
+    margin: 35px 0px 15px;
+    color: gold;
+}
+
+main p {
+    margin: 30px 0px 25px 400px;
+    font-size: large;
+}
+
+main button {
+    margin: 30px 0px 50px 400px;
+    color: #000033;
+    font-size: xx-large;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: gold;
+    box-shadow: 2px 2px 5px gold;
+}
+
+main button:hover {
+    background-color: #35e7ff;
+    box-shadow: 2px 2px 5px #35e7ff;
+}
+
+main button:active {
+    background-color: white;
+    box-shadow: 2px 2px 5px white;
+}
+
+.game {
+    width: 623px;
+    height: 840px;
+    margin: 0 auto 0px;
+    background-image: url("../img/bg_fundoPredioJanelas.png");
+    background-repeat: no-repeat;
+    cursor: crosshair;
+}
+
+
+.painel {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.square {
+    width: 208px;
+    height: 280px;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    display: flex;
+    padding: 15px 0 15px;
+    background-color: gold;
+}
+
+footer p {
+    color: #000033;
+    font-size: small;
+    margin: 5px auto 5px;
+}
+
+footer a {
+    color: #000033;
+    text-decoration: none;
+}
+
+footer a:hover {
+    font-size: large;
+}
+
+@media only screen and (max-width: 768px) {
+    main p {
+        margin: 30px 0px 25px 20%;
+        font-size: medium;
+    }
+
+    main button {
+        margin: 30px 0px 50px 20%;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .principal {
+        background-image: radial-gradient(closest-side at 40% 50%, rgb(251, 255, 200), rgb(146, 146, 55), #000033);
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .principal {
+        background-image: radial-gradient(closest-side at 45% 50%, rgb(251, 255, 200), rgb(146, 146, 55), #000033);
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        width: 100%;
+
+    }
+    main h1, h2 {
+        margin-right: 10%;
+    }
+
+    main p {
+        margin-right: 10%;
+        font-size: small;
+    }
+    main button {
+        margin-right: 10%;
+    }
+}
