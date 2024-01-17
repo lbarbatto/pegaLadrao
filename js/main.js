@@ -7,7 +7,9 @@ const state = {
     },
     values: {
         gameState: "play",
-        gameVelocity: 800,
+        stageTimer: null,
+        ticVelocity: 1000,
+        gameVelocity: 1000,
         timerID: null,
         currentTime: 30,
         countDownTimer: null,
@@ -32,6 +34,15 @@ const state = {
 
 }; */
 
+
+function aceleraTempo() {
+    state.values.gameVelocity -= 200;    
+}
+
+function passaFases() {
+    state.values.stageTimer = setInterval(aceleraTempo, 500);    
+}
+
 function randomSquare() {
     return Math.floor(Math.random() * 9);
 };
@@ -52,7 +63,7 @@ function defineJanela() {
 
 function trocaJanela() {
     state.values.timerID = setInterval(defineJanela, state.values.gameVelocity);
-    state.values.countDownTimer = setInterval(countDown, state.values.gameVelocity);
+    state.values.countDownTimer = setInterval(countDown, state.values.ticVelocity);
 
 };
 
@@ -152,6 +163,7 @@ function countDown() {
 }
 
 function jogar() {
+    passaFases();
     countDown();
     trocaJanela();
 };
